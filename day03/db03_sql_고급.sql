@@ -116,9 +116,3 @@ SELECT bookId
 -- 		  단, 전화번호가 없는 고객은 ‘연락처없음’으로 표시한다.
 SELECT name AS '이름', IFNULL(phone, '연락처없음') AS '전화번호'
   FROM Customer;
-  
--- 4-11 : 고객 목록에서 고객번호, 이름, 전화번호를 앞의 두 명만 보이시오. 
-   SET 	@seq:=0;
-SELECT	(@seq:=@seq+1) '순번', custid, name, phone
-  FROM	Customer
- WHERE 	@seq < 2;
