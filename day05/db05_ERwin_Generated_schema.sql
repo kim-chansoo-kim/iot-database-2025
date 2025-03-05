@@ -1,3 +1,4 @@
+use madangstore;
 
 CREATE TABLE Book
 (
